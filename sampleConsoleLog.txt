@@ -1,0 +1,82 @@
+Begin: testAssignmentSteps() - Test_001_Browse_Print_Bookmark_Base_flows
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Test 2
+Write a simple application per the following instruction:
+	Use Appium Webdriver
+	Open Chrome in simulator/emulator
+	Browse to http://m.slashdot.org/
+	Print how many articles are on the page
+	Print a list of unique (different) icons used on article titles and how many times was it used
+	Create a bookmark for this page
+	Return the title of the created bookmark
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Open Chrome, browse to: https://m.slashdot.org
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Launching URL: https://m.slashdot.org
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#######################
+### WARNING: Already web context
+#######################
+  Waiting for Element with ID 'stories' to load
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Found element with ID: stories
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Print how many articles are on the page
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Getting number of stories available on page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'stories'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Number of stories on page: 9
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Getting number of Carousal articles available on page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'featured'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Number of carousal articles on page: 5
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Total number of Articles on Page: 14
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Print a list of unique (different) icons used on article titles and how many times was it used
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Getting list of article editors
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'stories'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Editor 'EditorDavid' has 7 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Editor 'theodp' has 1 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Editor 'Anonymous Coward' has 1 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Create a bookmark for this page
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Bookmark current page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'More options'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'Bookmark this page'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Waiting for Element with ID 'stories' to load
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Found element with ID: stories
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Return the title of the created bookmark
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Finding Element with ID 'More options'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'Bookmarks'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Finding Element with ID 'com.android.chrome:id/action_bar'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Mobile Bookmarks are already launched.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        -> Title of the created bookmark: Slashdot
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Process finished with exit code 0
