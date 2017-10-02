@@ -1,8 +1,11 @@
-package com.ecobee.test.pages;
+package com.appium.example.pages.bookmark;
 
-import com.ecobee.test.AutomationConstants;
-import com.ecobee.test.BaseTest;
-import com.ecobee.test.Logger;
+import com.appium.example.AutomationConstants;
+import com.appium.example.BaseTest;
+import com.appium.example.Logger;
+import com.appium.example.interfaces.BookmarkInterface;
+import com.appium.example.pages.PageObject_Base;
+import com.appium.example.pages.homepage.HomeBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,34 +15,38 @@ import java.util.List;
  * Created by RolandC on 2017-09-09.
  * This class holds all id's, classname's, methods related to Bookmarking a page
  */
-public class Bookmark extends BaseTest {
+public class BookmarkBase extends PageObject_Base implements BookmarkInterface {
 
+    // id's
     private static String menu_button_id = "More options";
     private static String bookmark_page_id = "Bookmark this page";
     private static String bookmark_option_id = "Bookmarks";
     private static String mobile_bookmark_title_id = getResourceID() + "title";
     private static String bookmark_list_id = getResourceID() + "bookmark_row";
     private static String bookmark_action_bar_id = getResourceID() + "action_bar";
+    private static String bookmark_close_id = getResourceID() + "close_menu_id";
 
-
+    // texts
     private static String mobile_bookmark_text = "Mobile bookmarks";
-
-
 
     /**
      * Book mark a webpage that is currently in view
      * @throws Exception if bookmarks option not found
      */
-    public static void bookmarkCurrentPage() throws Exception {
-        Logger.logAction("Bookmark current page");
+    public void bookmarkCurrentPage() throws Exception {
+        Logger.logAction("bookmark current page");
         invokeMenuOptions();
-        //TODO : add check to see if page is already bookmarked. Alternatively, we can also remove all book marks at start of test
+        //TODO : add check to see if page is already bookmarked. Alternatively, we can also remove all book marks at start of example
         findElementAndClickByID(bookmark_page_id);
-        HomePage.waitForHomePageToLoad();
+        homePage.waitForHomePageToLoad();
     }
 
 
-    public static void printRecentBookmarkTitle() throws Exception {
+    /**
+     * Print bookmark title of the most recent bookmark
+     * @throws Exception
+     */
+    public void printRecentBookmarkTitle() throws Exception {
         Logger.logComment(String.format("Title of the created bookmark: %s", getRecentBookmarkTitle()));
     }
 
@@ -48,7 +55,7 @@ public class Bookmark extends BaseTest {
      * @return String title
      * @throws Exception
      */
-    public static String getRecentBookmarkTitle() throws Exception {
+    public String getRecentBookmarkTitle() throws Exception {
         String bookmarkTitle;
 
         navigateToBookmarks();
@@ -67,7 +74,7 @@ public class Bookmark extends BaseTest {
      * To invoke menu options from browser app
      * @throws Exception if menu options not found
      */
-    private static void invokeMenuOptions() throws Exception {
+    public void invokeMenuOptions() throws Exception {
         useNativeContext();
         findElementAndClickByID(menu_button_id);
     }
@@ -77,7 +84,7 @@ public class Bookmark extends BaseTest {
      * Navigate to Bookmarks list.
      * @throws Exception
      */
-    private static void navigateToBookmarks() throws Exception {
+    public void navigateToBookmarks() throws Exception {
         invokeMenuOptions();
         findElementAndClickByID(bookmark_option_id);
 
@@ -91,11 +98,24 @@ public class Bookmark extends BaseTest {
     }
 
     /**
-     * Check if Mobile Bookmark list if launched
+     * Check if Mobile bookmark list if launched
      * @return true if list in view, else false
      * @throws Exception
      */
-    private static boolean isMobileBookmarkAlreadyLaunched() throws Exception {
-        return findElementByID(bookmark_action_bar_id).isDisplayed();
+    public boolean isMobileBookmarkAlreadyLaunched() throws Exception {
+        try {
+            return findElementByClassAndText(AutomationConstants.ANDROID_TEXTVIEW, mobile_bookmark_text).isDisplayed();
+        } catch (Exception ex) {
+            Logger.logComment(String.format("We did not find header text '%s'", mobile_bookmark_text));
+            return false;
+        }
+    }
+
+    /**
+     * Close Bookmarks screen
+     * @throws Exception
+     */
+    public void closeBookmarks() throws Exception {
+        findElementAndClickByID(bookmark_close_id);
     }
 }

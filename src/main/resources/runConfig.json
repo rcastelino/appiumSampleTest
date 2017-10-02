@@ -1,0 +1,33 @@
+{
+  // For Local use: copy this file within the same `resources` directory with the name `runConfig.json`.
+  // Edit runConfig.json file. Do not edit this *.template file unless you intend to merge changes to this *.template for all
+
+  // Set the following path values to the local build locations for the various build variants
+
+  "iosDeviceAppPackagePath": "/Users/RolandC/Library/Developer/Xcode/DerivedData/DinerApp-aumfbysxmplecvagsxczesqzsehp/Build/Products/Debug-iphoneos/Seamless.app",
+
+  "androidAppPackagePath": "",
+
+  "iosSimulatorAppPackagePath": "",
+
+  // package name for Android and bundle id for iOS
+//  "package_name": "com.apple.mobilesafari",
+  "package_name": "com.android.chrome",
+
+  // 'android' or 'ios'
+  "platform": "android",
+
+  // `device` or `simulator` or 'emulator'
+  "target": "device",
+
+  // Android device details
+  "device_name_android": "Motorola",
+  "device_version_android": "7.1.1",
+
+  // iOS device details
+  "device_name_ios": "iPhone 6s",
+  "device_version_ios": "10.3",
+  "udid": "b3316f13b6db14be73621a62e31a81bacd25d646",
+
+  "default_appium_port_number": "4723"
+}

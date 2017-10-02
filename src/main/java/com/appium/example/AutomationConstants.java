@@ -1,4 +1,4 @@
-package com.ecobee.test;
+package com.appium.example;
 
 /**
  * Created by RolandC on 2017-09-09.
@@ -12,6 +12,8 @@ public class AutomationConstants {
     public static final long WAIT_TIME_5S = 5;
     public static final long WAIT_TIME_10S = 10;
     public static final long WAIT_TIME_30S = 30;
+
+    public static final long WAIT_TIME_120_MS = 120000;
 
     // Number of re-tries
     public static final int RE_TRY_3 = 3;

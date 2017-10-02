@@ -1,4 +1,4 @@
-package com.ecobee.test;
+package com.appium.example;
 
 /**
  * Created by RolandC on 2017-09-09.

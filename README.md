@@ -1,14 +1,17 @@
 ================================================================================================
-Test 2
+- WorkFlow
 ================================================================================================
 - Write a simple application per the following instruction:
 	- Use Appium Webdriver
-	- Open Chrome in simulator/emulator
+	- Open Mobile Browser. (Chrome for Android, Safari for iOS)
 	- Browse to http://m.slashdot.org/
 	- Print how many articles are on the page
 	- Print a list of unique (different) icons used on article titles and how many times was it used
 	- Create a bookmark for this page
 	- Return the title of the created bookmark
+	- Scroll to end of page and navigate to Desktop Site
+	- Verify URL of desktop site, scroll down page and select Mobile Site
+
 ================================================================================================
 
 [] To Get this project running on an OSX machine, install the following:
@@ -24,10 +27,9 @@ Test 2
 
 
 [] Project layout:
-- BaseTest.java is the Base class that initiates AppiumDriver, sets capabilities
+- BaseTest.java is the Base class that initiates AppiumDriver, sets capabilities, contains helper methods.
 - 'pages' package holds all classes related to the application / URL pages
 - 'tests' package holds the JUnit test to interact with Chrome browser.
-- This project right now supports only Chrome on Android.
 - the console output is available to view in 'sampleConsoleLogtxt'
 
 - NOTE - Should work both on emulator and device. However, I have tried it only on device since my machine slows down a lot when emulator is launched.

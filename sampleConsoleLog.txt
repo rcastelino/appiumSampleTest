@@ -1,82 +1,133 @@
-Begin: testAssignmentSteps() - Test_001_Browse_Print_Bookmark_Base_flows
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  Test 2
-Write a simple application per the following instruction:
-	Use Appium Webdriver
-	Open Chrome in simulator/emulator
-	Browse to http://m.slashdot.org/
+Begin: testWorkFlowSteps() - Test_001_Browse_Print_Bookmark_Base_Base_flows
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Open Chrome in simulator/emulator
+	Browse to a mobile website
 	Print how many articles are on the page
 	Print a list of unique (different) icons used on article titles and how many times was it used
 	Create a bookmark for this page
 	Return the title of the created bookmark
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	Scroll to end of page and navigate to Desktop Site
+	Verify URL of desktop site, scroll down page and select Mobile Site
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Open Chrome, browse to: https://m.slashdot.org
+Open Chrome, browse to: https://m.slashdot.org/
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  Launching URL: https://m.slashdot.org
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Launching URL: https://m.slashdot.org/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #######################
-### WARNING: Already web context
+### WARNING: Already web context: CHROMIUM
+#######################
+#######################
+### WARNING: Already web context: CHROMIUM
 #######################
   Waiting for Element with ID 'stories' to load
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         -> Found element with ID: stories
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Print how many articles are on the page
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   Getting number of stories available on page
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'stories'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Number of stories on page: 9
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Getting number of Carousal articles available on page
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'featured'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Number of carousal articles on page: 5
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         -> Total number of Articles on Page: 14
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Print a list of unique (different) icons used on article titles and how many times was it used
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   Getting list of article editors
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'stories'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        -> Editor 'EditorDavid' has 7 articles
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        -> Editor 'theodp' has 1 articles
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        -> Editor 'Anonymous Coward' has 1 articles
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        -> Editor 'msm1267' has 1 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        -> Editor 'Camel Pilot' has 1 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        -> Editor 'msmash' has 6 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        -> Editor 'BeauHD' has 1 articles
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Create a bookmark for this page
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  Bookmark current page
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  bookmark current page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'More options'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'Bookmark this page'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Waiting for Element with ID 'stories' to load
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         -> Found element with ID: stories
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Return the title of the created bookmark
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   Finding Element with ID 'More options'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   Finding Element with ID 'Bookmarks'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  Finding Element with ID 'com.android.chrome:id/action_bar'
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         -> Mobile Bookmarks are already launched.
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         -> Title of the created bookmark: Slashdot
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-Process finished with exit code 0
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Finding Element with ID 'com.android.chrome:id/close_menu_id'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Navigate to Desktop Site
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Trying to select 'Desktop Site' on page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Finding Element with CSS '.skip-ad.desktop-site'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Verify correct URL of desktop site launched
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Verifying that page url is : https://slashdot.org/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+        -> Browser page url matches - https://slashdot.org/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Navigate back to Mobile Site
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Trying to select 'Mobile View' on page
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+  Finding Element with ID 'ft'
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Verify correct URL of mobile site launched
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Verifying that page url is : https://m.slashdot.org/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#######################
+### WARNING: Already web context: CHROMIUM
+#######################
+        -> Browser page url matches - https://m.slashdot.org/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
